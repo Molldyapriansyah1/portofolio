@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haze project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  body{
+     background-color: rgb(0, 0, 0);
+  }
+  a {
+    scroll-margin-top: 100px; 
+    scroll-behavior: smooth;
+  }
+  *{
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  /*obviousli header*/
+  header{
+      width: 200px;
+      height: 100vh;
+      
+  }
+  header img{
+      width: 125px;
+      position: absolute;
+      padding: 25px 30px;
+  } 
+  /*nav-bar*/
+  .menu-list {
+      border-left: 1px solid rgba(255, 255, 255, 0.5);
+      list-style: none;
+      margin: 0;
+      padding: 4.074vh 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      left: 20px;
+      top: 250px; 
+      z-index: 1; 
+  }
+  
+  .menu-list li {
+      padding: 15px;
+      list-style: none;
+      flex-direction: column;
+  }
+  
+  .menu-list li a {
+      text-decoration: none;
+      transition: all 0.5s ease;
+  }
+  
+  .menu-list li a:hover {
+      font-size: 18px;
+      padding: 7px 9px;
+      border-bottom: 1px solid rgb(0, 0, 0);
+      font-weight: bold;
+  }
+  #menu-toggle {
+      font-size: 30px;
+      display: block;
+      position: fixed;
+      top: 200px;
+      left: 20px;
+      cursor: pointer;
+      z-index: 2; 
+  }
+  /*home page*/
+  /*father item*/
+  .hantu0{
+      display: flex;
+      margin-top: -200px;
+      
+  }
+  /*h1*/
+  .hantu1{
+     position: absolute;
+     font-size: 50px;
+     top: 300px;
+     left: 250px;
+  }
+  /*the image*/
+  .hantu2{
+      width: 490px;
+      position:absolute;
+      top: 80px;
+      left: 850px;
+  }
+  /*what is page*/
+  #death{
+      margin-top: 50px;
+      margin-bottom: 100px;
+      padding-top: 80px;
+      position: relative;
+      top: 200px;
+  }
+  #death h2{
+      font-size: 75px;
+      position: absolute;
+      top: 100px;
+      left: 300px;
+  }
+  #death p{
+      font-size: 24px;
+      position: absolute;
+      top:300px;
+      left: 280px;
+  }
+  #death h4{
+      font-size: 75px;
+      position: absolute;
+      top:400px;
+      left: 300px;
+  }
+  #death a{
+      text-decoration: none;
+      font-size: 24px;
+      position: absolute;
+      top:600px;
+      left: 280px;
+  }
+  #death img{
+      width: 350px;
+      padding-left: 900px;
+      padding-top: -10;
+  }
+  /*profile*/
+  #life{
+      padding-top: 250px;
+      position: relative;
+      top: 100px;
+  }
+  #life h2{
+      font-size: 75px;
+      position: absolute;
+      top: 200px;
+      left: 300px;
+  }
+  #life p{
+      font-size: 24px;
+      position: absolute;
+      top:400px;
+      left: 280px;
+  }
+  #life a{
+      text-decoration: none;
+      font-size: 24px;
+      position: absolute;
+      top:600px;
+      left: 280px;
+  }
+  #life img{
+      width: 450px;
+      padding-left: 900px;
+      padding-bottom: 50px;
+  }
+  /*certi*/
+  #reincarnation{
+      margin-top: 250px;
+      padding-bottom:200px ;
+      display: flex;
+      padding-top:8% ;
+  }
+  .card {
+      background-color: rgb(68, 68, 68);
+      box-shadow: 0 4px 8px 0 rgba(25, 25, 25);
+      transition: 0.3s;
+      width: 40%;
+      border-radius: 5px;
+      margin: 40px 0px 0px 80px;
+      padding-left: 25px;
+      padding-top: 20px;
+    }
+  img {
+      padding-left: 75px;
+      width: 75%;
+      border-radius: 5px 5px 0 0;
+    }
+  .rein{
+      text-align: center;
+      padding: 2px 16px;
+      padding-bottom: 20px;
+    }
+  .god-feet{
+      margin-top: 50px;
+      text-align: center;
+      padding-bottom: 50px;
+  }
+
+  @media (max-width: 768px) {
+  html{
+    width :100%;
+  }  
+  header {
+      height: 80px;
+    }
+
+    header img {
+      width: 100px;
+      padding: 15px;
+    }
+
+    .menu-list {
+      left: 20px;
+      top: 250px;
+      font-size: 24px;
+    }
+
+    .hantu0 {
+      flex-direction: row;
+    }
+
+    .hantu1 {
+      position: relative;
+      font-size: 42px;
+      top: 80vh;
+      left: 30%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .hantu2 {
+      width: 100%;
+      position: absolute;
+      top: 80px;
+      left: 80%;
+    }
+    #death {
+      margin-top: 115vh;
+    }
+    #death h2{
+      left: 25%;
+      padding-top: 25%;
+    }
+    #death p,
+    #death h4,
+    #death a {
+      left: 95px;
+      text-align: center;
+      padding-top: 25%;
+    }
+
+    #death img {
+      width: 60%;
+      padding-left: 110%;
+      padding-top: 10%;
+      margin-top: 20px;
+    }
+    #life {
+      margin-top: 50vh;
+    }
+    #life h2{
+      left: 40%;
+      padding-top: 15%;
+    }
+    #life p,
+    #life a {
+      left: 95px;
+      text-align: center;
+      padding-top: 15%;
+    }
+
+
+    #life img {
+      padding-left: 100%;
+      margin-top: 20px;
+      width: 75%;
+    }
+    .god-feet{
+      margin-top: 50px;
+      position: absolute;
+      left: 50%;
+      font-size: 24px;
+    }
+    #reincarnation {
+      margin-top: 70vh;
+    }
+    .card{
+      width: 250%;
+      display: block;
+      margin-bottom: 20px;
+    }
+    .card img{
+      padding: 25px;
+    }
+    .god-feet{
+      padding-bottom: 20px;
+    }
+  }
+</style>
+</head>
+
+<body>
+  <header>
+    <img src="img/logo.png" class="logo">
+    <nav>
+      <ul class="menu-list animate__animated animate__slideInLeft " id="menu-list">
+        <li><a href="#">home</a></li>
+        <li><a href="#death">what is?</a></li>
+        <li><a href="#life">profile</a></li>
+        <li><a href="#reincarnation">certi</a></li>
+      </ul>
+    </nav>
+    <div id="menu-toggle">☰</div>
+  </Header>
+  <main>
+    <div class="hantu0">
+      <div class="hantu1">
+        <h1>HAZE<br>PROJECT</h1>
+      </div>
+      <div class="hantu2">
+        <img src="img/918.jpg" alt="porsche">
+      </div>
+    </div>
+    <div id="death">
+      <article>
+        <h2>what <br>is Haze?</h2>
+        <p>Haze is my nickname in countless <br>game acount and its being part of my second identity.</p>
+        <h4>where is it <br>come from?</h4>
+        <a href="https://gundam.fandom.com/wiki/RX-124_Gundam_TR-6_%EF%BC%BBHaze%27n-thley_II-Rah%EF%BC%BD">its from a
+          mobile suit name from a vidual novel <br> called Advance of Zeta: The Flag of Titans.</a>
+        </article>
+        <div class="ghost0"></div>
+        <img src="img/haze.png" alt="RX-124 Gundam TR-6 [Haze'n-thley II-Rah]" width="100px">
+    </div>
+    <div id="life">
+      <article>
+        <h2>who <br>i am?</h2>
+        <p>My name is molldy apriansyah im from pplg x-3.<br>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit, <br> sed do
+          eiusmod tempor incididunt ut<br> labore et dolore magna aliqua.  Ut enim ad minim veniam,<br> quis nostrud exercitation
+          ullamco laboris <br> nisi ut aliquip ex ea commodo consequat</p>
+        <img src="img/doodle.png" alt="doodle" width="100px">
+      </article>
+    </div>
+    <div id="reincarnation">
+      <div class="card">
+        <img src="img/decoding.png" alt="Avatar" >
+        <div class="rein">
+          <h4><b>dicoding</b></h4> 
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt</p> 
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/47.png" alt="Avatar" >
+        <div class="rein">
+          <h4><b>kwh</b></h4> 
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt</p> 
+        </div>
+      </div>
+   </div>
+  </main>
+</body>
+<footer>
+  <div class="god-feet">
+    <h4>ABOUT ME</h4>
+    <p>walaupun web ini baru dan pengerjaannya yang singkat dan saya bersenang senang karna project ini</p>
+    <p>©,2K23 Haze</p>
+  </div>
+</footer>
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', function () {
+    var menuList = document.getElementById('menu-list');
+    menuList.style.display = (menuList.style.display === 'block') ? 'none' : 'block';
+  });
+
+  let input = "enter";
+        do {
+        console.log(" type key(type 'enter' to stop):");
+        input = prompt();
+        console.log("You entered:", input);
+        } while (input !== "enter");
+</script>
+</html>

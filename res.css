@@ -1,0 +1,100 @@
+@media (max-width: 768px) {
+  html{
+    width :100%;
+  }  
+  header {
+      height: 80px;
+    }
+
+    header img {
+      width: 100px;
+      padding: 15px;
+    }
+
+    .menu-list {
+      left: 20px;
+      top: 250px;
+      font-size: 24px;
+    }
+
+    .hantu0 {
+      flex-direction: row;
+    }
+
+    .hantu1 {
+      position: relative;
+      font-size: 42px;
+      top: 80vh;
+      left: 30%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .hantu2 {
+      width: 100%;
+      position: absolute;
+      top: 80px;
+      left: 80%;
+    }
+    #death {
+      margin-top: 115vh;
+    }
+    #death h2{
+      left: 25%;
+      padding-top: 25%;
+    }
+    #death p,
+    #death h4,
+    #death a {
+      left: 95px;
+      text-align: center;
+      padding-top: 25%;
+    }
+
+    #death img {
+      width: 60%;
+      padding-left: 110%;
+      padding-top: 10%;
+      margin-top: 20px;
+    }
+    #life {
+      margin-top: 50vh;
+    }
+    #life h2{
+      left: 40%;
+      padding-top: 15%;
+    }
+    #life p,
+    #life a {
+      left: 95px;
+      text-align: center;
+      padding-top: 15%;
+    }
+
+
+    #life img {
+      padding-left: 100%;
+      margin-top: 20px;
+      width: 75%;
+    }
+    .god-feet{
+      margin-top: 50px;
+      position: absolute;
+      left: 50%;
+      font-size: 24px;
+    }
+    #reincarnation {
+      margin-top: 70vh;
+    }
+    .card{
+      width: 250%;
+      display: block;
+      margin-bottom: 20px;
+    }
+    .card img{
+      padding: 25px;
+    }
+    .god-feet{
+      padding-bottom: 20px;
+    }
+  }
